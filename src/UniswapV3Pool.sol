@@ -93,5 +93,12 @@ contract UniswapV3Pool {
 
         amount0 = uint256(amount0Int);
         amount1 = uint256(amount1Int);
+
+        if (amount0 > 0) {
+            IERC20(token0).transferFrom(msg.sender, address(this), amount0);
+        }
+        if (amount1 > 0) {
+            IERC20(token1).transferFrom(msg.sender, address(this), amount1);
+        }
     }
 }
