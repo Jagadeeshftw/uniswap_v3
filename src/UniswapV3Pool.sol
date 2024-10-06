@@ -6,6 +6,7 @@ import {Tick} from "./lib/Tick.sol";
 import {TickMath} from "./lib/TickMath.sol";
 import {Position} from "./lib/Position.sol";
 import {SafeCast} from "./lib/SafeCast.sol";
+import {IERC20} from "../src/interfaces/IERC20.sol";
 
 contract UniswapV3Pool {
     address public immutable factory;
